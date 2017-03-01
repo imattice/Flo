@@ -13,6 +13,7 @@
 		7F6FFBB01E61413800868DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6FFBAF1E61413800868DF7 /* Assets.xcassets */; };
 		7F6FFBBB1E61432700868DF7 /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FFBBA1E61432700868DF7 /* PushButtonView.swift */; };
 		7F6FFBBD1E6381F900868DF7 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FFBBC1E6381F900868DF7 /* CounterView.swift */; };
+		7F6FFBBF1E647AC100868DF7 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FFBBE1E647AC100868DF7 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7F6FFBAF1E61413800868DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F6FFBBA1E61432700868DF7 /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		7F6FFBBC1E6381F900868DF7 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		7F6FFBBE1E647AC100868DF7 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7F6FFBAA1E61413800868DF7 /* ViewController.swift */,
 				7F6FFBBA1E61432700868DF7 /* PushButtonView.swift */,
 				7F6FFBBC1E6381F900868DF7 /* CounterView.swift */,
+				7F6FFBBE1E647AC100868DF7 /* GraphView.swift */,
 				7F6FFBAF1E61413800868DF7 /* Assets.xcassets */,
 				7F6FFBAC1E61413800868DF7 /* Main.storyboard */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6FFBBF1E647AC100868DF7 /* GraphView.swift in Sources */,
 				7F6FFBAB1E61413800868DF7 /* ViewController.swift in Sources */,
 				7F6FFBBB1E61432700868DF7 /* PushButtonView.swift in Sources */,
 				7F6FFBA91E61413800868DF7 /* AppDelegate.swift in Sources */,
