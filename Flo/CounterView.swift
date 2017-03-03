@@ -65,6 +65,45 @@ class CounterView: UIView {
         outlineColor.setStroke()
         outlinePath.lineWidth = 5.0
         outlinePath.stroke()
+        
+        //COUNTER VIEW MARKERS
+        let context = UIGraphicsGetCurrentContext()
+        
+        //save original state
+        context!.saveGState()
+        outlineColor.setFill()
+        
+        let markerWidth: CGFloat = 5.0
+        let markerSize: CGFloat = 10.0
+        
+        //the marker rectangle positioned at the top left
+        var markerPath = UIBezierPath(rect: CGRect(x: -markerWidth / 2,
+                                                   y: 0,
+                                                   width: markerWidth,
+                                                   height: markerSize))
+        
+        //move top left of context to the previous center position
+        context!.translateBy(x: rect.width / 2, y: rect.height / 2)
+        
+        for i in 1...numberOfGlasses {
+            //save the centered context
+            context!.saveGState()
+            
+            var angle = arcLengthPerGlass * CGFloat(i) + startAngle - π / 2
+            
+            //rotate and translate
+            context!.rotate(by: angle)
+            context!.translateBy(x: 0, y: rect.height / 2 - markerSize)
+            
+            //fill the marker rectangle
+            markerPath.fill()
+            
+            //restore the centered context for the next rotate
+            context!.restoreGState()
+        }
+        
+        //restore the original state in case of more painting
+        context!.restoreGState()
     }
 
 }

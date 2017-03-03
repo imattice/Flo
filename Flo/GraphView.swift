@@ -12,7 +12,7 @@ import UIKit
 
 @IBDesignable
 class GraphView: UIView {
-    let graphPoints: [Int] = [4, 2, 6, 4, 5, 8, 3]
+    var graphPoints: [Int] = [4, 2, 6, 4, 5, 8, 3]
 
     //gradient properties
     @IBInspectable var startColor: UIColor = .red
@@ -94,7 +94,7 @@ class GraphView: UIView {
         context!.saveGState()
         
         //use a copy of the graph line as the top of the gradient shape
-        var clippingPath = graphPath.copy() as! UIBezierPath
+        let clippingPath = graphPath.copy() as! UIBezierPath
         
         //add lines to the copied path to complet the clip area.  This adds the corner points to the clipped area.
         clippingPath.addLine(to: CGPoint(x: columnXPoint(graphPoints.count - 1), y: height))
@@ -128,7 +128,7 @@ class GraphView: UIView {
         }
         
         //HORIZONTAL GRAPH LINES
-        var linePath = UIBezierPath()
+        let linePath = UIBezierPath()
         
         //top line
         linePath.move(to: CGPoint(x:margin, y: topBorder))
